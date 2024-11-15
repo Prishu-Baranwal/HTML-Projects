@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5f5f66;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 96%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input[type="radio"] {
+            width: auto;
+        }
+        .gender {
+            margin-bottom: 15px;
+        }
+        button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <p style="text-align: center;">Fill this form to register</p>
+        <form action="action.php" method="POST">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+            
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Enter your last name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="username">Set Username</label>
+            <input type="text" id="username" name="username" placeholder="Set Username" required>
+            
+            <label for="password">Set Password</label>
+            <input type="password" id="password" name="password" placeholder="Set Password" required>
+            
+            <div class="gender">
+                <label>Gender:</label>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+            </div>
+            
+            <label for="courses">Courses</label>
+            <select id="courses" name="courses">
+                <option value="Btech CSE">Btech CSE</option>
+                <option value="Btech AI and ML">Btech AI and ML</option>
+                <option value="Btech ECE">Btech ECE</option>
+                <option value="Btech MCE">Btech MCE</option>
+            </select>
+            
+            <button type="submit">Register</button>
+        </form>
+        <div class="footer">
+            © 2024 Student Registration | All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>
